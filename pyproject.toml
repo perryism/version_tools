@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "version_tools"
+version = "0.1.0"
+description = "A set of tools for managing version"
+authors = [
+    {name = "Perry Lee",  email = "perryism@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
