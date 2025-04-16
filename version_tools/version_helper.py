@@ -49,6 +49,10 @@ def bump_version(version: Union[Version, str], version_type: Union[VersionType, 
     elif version_type == VersionType.FINAL:
         return version.finalize_version()
     elif version_type == VersionType.DEV:
-        return version.replace(prerelease=PRE_RELEASE_SUFFIX)
+        if version.prerelease:
+            return version.bump_prerelease()
+        else:
+            version = version.replace(prerelease=PRE_RELEASE_SUFFIX)
+            return version
     else:
         raise ValueError(f'Unknown bump {version_type}')

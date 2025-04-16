@@ -15,6 +15,8 @@ class TestHelper(unittest.TestCase):
 
         self.assertEqual(bump_version(ver, "dev"), "0.1.0-dev0")
 
+        self.assertEqual(bump_version("0.1.0-dev0", "dev"), "0.1.0-dev1")
+
         ver = "0.1.0-dev0"
         self.assertEqual(str(bump_version(ver, "pre")), "0.1.0-dev1")
 
