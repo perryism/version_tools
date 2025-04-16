@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "version_tools"
-version = "0.1.0"
+version = "0.1.1"
 description = "A set of tools for managing version"
 authors = [
     {name = "Perry Lee",  email = "perryism@gmail.com"}
