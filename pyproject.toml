@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "version_tools"
+name = "version-tools"
 version = "0.1.0"
 description = "A set of tools for managing version"
 authors = [
